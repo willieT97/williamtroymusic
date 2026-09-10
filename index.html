@@ -271,6 +271,31 @@
   .resources{ margin-top:2.6rem; padding-top:2rem; border-top:1.5px solid color-mix(in srgb,var(--paper) 18%,transparent); }
   .resources p{ color:color-mix(in srgb,var(--paper) 75%,transparent); margin:.4rem 0 0; }
 
+  /* reading list — a shelf of its own, in the site's riso palette */
+  .shelf-panel{
+    background:var(--paper-2);
+    border:1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+    border-radius:var(--radius);
+    padding:clamp(2rem,5vw,3.2rem);
+    box-shadow:10px 10px 0 color-mix(in srgb, var(--gold) 70%, transparent);
+  }
+  .shelf-books{ margin:0 0 1.8rem; }
+  .shelf-books svg{ display:block; width:min(560px,100%); height:auto; }
+  .shelf-copy{ max-width:64ch; }
+  .shelf-copy h2{ font-size:clamp(1.9rem,4.5vw,3rem); max-width:20ch; margin:0 0 1.4rem; }
+  .shelf-copy p{ margin:0 0 1.1rem; color:var(--ink-soft); }
+  .shelf-copy p.shelf-lead{ font-size:1.14rem; color:var(--ink); font-weight:500; }
+  .shelf-btn{
+    display:inline-flex; align-items:center; gap:.6rem; text-decoration:none;
+    background:var(--violet-deep); color:var(--paper-2); font-weight:700; font-size:1.02rem;
+    padding:.95rem 1.5rem; border-radius:12px; margin-top:.6rem;
+    box-shadow:5px 5px 0 color-mix(in srgb, var(--coral) 75%, transparent);
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .shelf-btn:hover{ background:var(--violet); transform:translate(-2px,-2px);
+    box-shadow:7px 7px 0 color-mix(in srgb, var(--coral) 75%, transparent); }
+  .shelf-btn:focus-visible{ outline:3px solid var(--coral); outline-offset:3px; }
+
   /* arcade — neobrutalist styling to match the Music Arcade games themselves,
      intentionally distinct from the riso palette used across the rest of the site */
   .arcade{
@@ -423,6 +448,7 @@
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#reading">Reading List</a></li>
         <li><a href="#arcade">Music Arcade</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -792,7 +818,57 @@
 
         <div class="resources">
           <p class="sub-label" style="margin-top:0">Resources</p>
-          <p><a href="reading-list.html">The reading list</a> behind the creativity workshops — the books and papers, each with a link to read it — and <a href="https://themusicarcade.com/resources.html">the tools I keep coming back to</a>.</p>
+          <p><a href="https://themusicarcade.com/resources.html">The tools I keep coming back to</a> — printables, references and practice aids, over at the Music Arcade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── THE READING LIST ───────────── -->
+  <section class="section" id="reading">
+    <div class="wrap">
+      <div class="shelf-panel reveal">
+        <div class="shelf-books" aria-hidden="true">
+          <svg viewBox="0 0 560 118">
+            <!-- standing spines -->
+            <rect x="20"  y="26" width="26" height="84" fill="#E23B26"/>
+            <rect x="50"  y="18" width="20" height="92" fill="#00897B"/>
+            <rect x="74"  y="34" width="30" height="76" fill="#FFC53D"/>
+            <rect x="108" y="22" width="22" height="88" fill="#5E45A0"/>
+            <rect x="134" y="30" width="24" height="80" fill="#FF7FB0"/>
+            <!-- one leaning -->
+            <rect x="184" y="24" width="20" height="86" fill="#16B59E" transform="rotate(-12 194 110)"/>
+            <rect x="214" y="16" width="28" height="94" fill="#1E1729"/>
+            <rect x="246" y="32" width="18" height="78" fill="#FF5D49"/>
+            <rect x="268" y="20" width="26" height="90" fill="#8A6BD8"/>
+            <!-- two lying flat -->
+            <rect x="312" y="94" width="84" height="16" fill="#FFC53D"/>
+            <rect x="322" y="78" width="66" height="16" fill="#E23B26"/>
+            <!-- back to standing -->
+            <rect x="410" y="24" width="22" height="86" fill="#00897B"/>
+            <rect x="436" y="38" width="30" height="72" fill="#FF7FB0"/>
+            <rect x="470" y="20" width="20" height="90" fill="#5E45A0"/>
+            <rect x="494" y="30" width="26" height="80" fill="#FFC53D"/>
+            <!-- spine label stripes -->
+            <g fill="#FBF7F0" opacity=".65">
+              <rect x="25" y="38" width="16" height="4"/>
+              <rect x="80" y="46" width="18" height="4"/>
+              <rect x="112" y="36" width="14" height="4"/>
+              <rect x="220" y="30" width="16" height="4"/>
+              <rect x="274" y="34" width="14" height="4"/>
+              <rect x="415" y="38" width="12" height="4"/>
+              <rect x="499" y="44" width="16" height="4"/>
+            </g>
+            <!-- the shelf -->
+            <rect x="6" y="110" width="548" height="5" rx="2.5" fill="#1E1729"/>
+          </svg>
+        </div>
+        <div class="shelf-copy">
+          <p class="eyebrow">The Reading List</p>
+          <h2>The research behind the teaching.</h2>
+          <p class="shelf-lead">Creativity is one of the most studied subjects there is. Its links to connection, community and positive mental health have filled decades of books and journals. This shelf is the part of that literature I personally draw on: the research and traditions that keep my teaching grounded in evidence, and that help it connect with young and old alike.</p>
+          <p>Browse at your leisure. Every entry is a book, paper or article with a link to read it, and I hope they deepen your passion for creativity the way they've deepened mine.</p>
+          <a class="shelf-btn" href="reading-list.html">Browse the shelf →</a>
         </div>
       </div>
     </div>
